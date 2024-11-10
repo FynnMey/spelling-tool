@@ -8,5 +8,3 @@ model = genai.GenerativeModel("gemini-1.5-flash")
 response = model.generate_content(
     "Behebe rechtschreibfehler in Folgendem Text: Hall o ich bin Fynn und ich mahe rechtschrfeifehler")
 print(response.text)
-print(response.text)
-print(response.text)
