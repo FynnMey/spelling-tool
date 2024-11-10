@@ -1,6 +1,15 @@
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, request, render_template
 
-app = Flask(__name__)
+app = Flask(
+    __name__,
+    template_folder='website/dist/spa',
+    static_folder='website/dist/spa/assets'
+)
+
+# Route für die Standardseite
+@app.route('/')
+def home():
+    return render_template('index.html')
 
 @app.route('/api', methods=['GET'])
 def api():
@@ -21,3 +30,6 @@ def receive_data():
         return jsonify(response)
     else:
         return jsonify({'error': 'Request must be JSON'}), 400
+
+if __name__ == '__main__':
+    app.run(debug=True)

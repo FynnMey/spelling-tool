@@ -1,0 +1,3 @@
+website/dist
+website/node_modules
+.venv
