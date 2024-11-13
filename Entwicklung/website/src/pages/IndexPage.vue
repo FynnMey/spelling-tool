@@ -1,42 +1,53 @@
 <template>
-  <q-page class="row items-center justify-evenly">
-    <example-component
-      title="Example component"
-      active
-      :todos="todos"
-      :meta="meta"
-    ></example-component>
+  <q-page class="items-center justify-evenly">
+    <div class="row q-pa-md">
+      <q-input 
+        v-model="textfield" 
+        type="textarea" 
+        outlined 
+        :label="!textfield ? 'Gebe hier deinen Text zum überprüfen ein' : 'Dein Text'" 
+        class="col-12"
+      />
+      <div class="full-width flex justify-end">
+        <q-btn 
+        color="secondary"
+        label="Überprüfen"
+        icon="check"
+        :disable="textfield ? false : true"
+        class="q-mt-md" 
+        @click="onCheckText"
+      >
+        <q-tooltip v-if="!textfield">Bitte gebe erst etwas in das Textfeld ein</q-tooltip>
+      </q-btn>
+      </div>
+      <q-input 
+        v-model="textfieldResponse" 
+        type="textarea" 
+        outlined 
+        :label="!textfield ? 'Gebe hier deinen Text zum überprüfen ein' : 'Dein Text'" 
+        class="q-mt-md"
+      />
+    </div>
   </q-page>
 </template>
 
 <script setup lang="ts">
-import { Todo, Meta } from 'components/models';
-import ExampleComponent from 'components/ExampleComponent.vue';
 import { ref } from 'vue';
+const textfield = ref('')
+const textfieldResponse = ref('')
 
-const todos = ref<Todo[]>([
-  {
-    id: 1,
-    content: 'ct1'
-  },
-  {
-    id: 2,
-    content: 'ct2'
-  },
-  {
-    id: 3,
-    content: 'ct3'
-  },
-  {
-    id: 4,
-    content: 'ct4'
-  },
-  {
-    id: 5,
-    content: 'ct5'
-  }
-]);
-const meta = ref<Meta>({
-  totalCount: 1200
-});
+async function onCheckText() {
+  const response = await fetch('/api/check-text', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ message: textfield.value }) // Text aus dem Input-Feld senden
+    });
+
+    // Antwort als Text auslesen
+    const data = await response.text();  // Hier nutzen wir `.text()`, da die Antwort kein JSON ist
+    textfieldResponse.value = data
+
+}
 </script>
