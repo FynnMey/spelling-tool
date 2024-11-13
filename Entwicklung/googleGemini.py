@@ -6,8 +6,9 @@ model = genai.GenerativeModel("gemini-1.5-flash")
 
 
 def googleGeminiRequest(t):
-    response = model.generate_content(t)
+    params = 'Bitte behebe in folgendem Sazt Saztbau und Rechtschreibfehler und gibt ihn mir wieder zurück: '
+    response = model.generate_content(params + t)
     if (response.text):
-        print(response.text)
+        return response.text
     else:
-        print('zgsda')
+        return '500'

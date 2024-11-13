@@ -1,4 +1,5 @@
 from flask import Flask, jsonify, request, render_template
+from googleGemini import googleGeminiRequest
 
 app = Flask(
     __name__,
@@ -11,13 +12,15 @@ app = Flask(
 def home():
     return render_template('index.html')
 
-@app.route('/api', methods=['GET'])
+@app.route('/api/check-text', methods=['POST'])
 def api():
-    data = {
-        'message': 'Hello, world!',
-        'status': 'success'
-    }
-    return jsonify(data)
+    data = request.get_json()
+
+    message = data.get('message', 'Kein Text übergeben')
+    geminiResponse = googleGeminiRequest(message)
+    print(geminiResponse)
+
+    return jsonify(geminiResponse)
 
 @app.route('/api/data', methods=['POST'])
 def receive_data():
