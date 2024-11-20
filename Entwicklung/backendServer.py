@@ -27,7 +27,6 @@ def api():
     data = request.get_json()
     message = data.get('message', 'Kein Text übergeben')
     geminiResponse = googleGeminiRequest(message)
-    print(geminiResponse)
     try:
         return geminiResponse
     except():

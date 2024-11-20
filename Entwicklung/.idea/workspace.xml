@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3e0f0bc9-c672-4b1d-9928-a0d09dbff26e" name="Changes" comment="" />
+    <list default="true" id="3e0f0bc9-c672-4b1d-9928-a0d09dbff26e" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../Berrichtshäfte/Wochenbericht - Fynn Meyer [20.11.2024].doc" beforeDir="false" afterPath="$PROJECT_DIR$/../Berrichtshäfte/Wochenbericht - Fynn Meyer [20.11.2024].doc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backendServer.py" beforeDir="false" afterPath="$PROJECT_DIR$/backendServer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/googleGemini.py" beforeDir="false" afterPath="$PROJECT_DIR$/googleGemini.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/src/layouts/MainLayout.vue" beforeDir="false" afterPath="$PROJECT_DIR$/website/src/layouts/MainLayout.vue" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
