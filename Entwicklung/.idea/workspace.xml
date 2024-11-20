@@ -5,10 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3e0f0bc9-c672-4b1d-9928-a0d09dbff26e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../Berrichtshäfte/Wochenbericht - Fynn Meyer [].doc" beforeDir="false" afterPath="$PROJECT_DIR$/../Berrichtshäfte/Wochenbericht - Fynn Meyer [].doc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backendServer.py" beforeDir="false" afterPath="$PROJECT_DIR$/backendServer.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/googleGemini.py" beforeDir="false" afterPath="$PROJECT_DIR$/googleGemini.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.py" beforeDir="false" afterPath="$PROJECT_DIR$/index.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/quasar.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/website/quasar.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/src/pages/IndexPage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/website/src/pages/IndexPage.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/website/src/quasar.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/website/src/quasar.d.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
