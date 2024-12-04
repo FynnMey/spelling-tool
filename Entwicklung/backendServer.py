@@ -6,22 +6,20 @@ import os
 app = Flask(
     __name__,
     template_folder='website/dist/spa',
-    static_folder='website/dist/spa/assets',  # Beibehalten des 'assets'-Ordners für andere Dateien
+    static_folder='website/dist/spa/assets',
 )
 
 CORS(app)
 
-# Route für statische Dateien im Hauptverzeichnis von 'dist/spa'
 @app.route('/<path:filename>')
 def serve_static_file(filename):
     return send_from_directory('website/dist/spa', filename)
 
-# Standardseite
 @app.route('/')
 def home():
     return render_template('index.html')
 
-# Andere Routen (beibehalten)
+
 @app.route('/api/check-text', methods=['POST'])
 def api():
     data = request.get_json()
